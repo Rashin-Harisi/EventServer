@@ -1,6 +1,18 @@
+
 {
   "events": [
     {
+      "id":"4f966d8a-2a1a-4a8f-a8e7-b6040bf52258",
+      "title": "Vienna Food-Wine Expo",
+      "imageUrl": "vienna-food-wine-expo.jpg",
+      "organizer": "Vienna Culinary Association",
+      "date": "2024-09-02",
+      "location": "Messe Wien Exhibition & Congress Center, Vienna",
+      "discount": "15",
+      "price": "30"
+    },
+    {
+      "id":"d37929a4-8c81-4de0-88ad-3ede4155a5d8",
       "title": "Vienna Music Festival",
       "imageUrl": "vienna-music-festival.jpg",
       "organizer": "Vienna Arts Society",
@@ -10,15 +22,7 @@
       "price": "50"
     },
     {
-      "title": "Vienna Food & Wine Expo",
-      "imageUrl": "vienna-food-wine-expo.jpg",
-      "organizer": "Vienna Culinary Association",
-      "date": "2024-08-28",
-      "location": "Messe Wien Exhibition & Congress Center, Vienna",
-      "discount": "15",
-      "price": "30"
-    },
-    {
+      "id":"a8d5f728-d34c-4e5e-a8e0-1608390ab083",
       "title": "Vienna Fashion Week",
       "imageUrl": "vienna-fashion-week.jpg",
       "organizer": "Vienna Fashion Council",
@@ -28,24 +32,7 @@
       "price": "100"
     },
     {
-      "title": "Vienna Christmas Market",
-      "imageUrl": "vienna-christmas-market.jpg",
-      "organizer": "City of Vienna",
-      "date": "2024-12-01",
-      "location": "Rathausplatz, Vienna",
-      "discount": "",
-      "price": "0"
-    },
-    {
-      "title": "Vienna Film Festival",
-      "imageUrl": "vienna-film-festival.jpeg",
-      "organizer": "Vienna Film Society",
-      "date": "2024-10-15",
-      "location": "Vienna State Opera, Vienna",
-      "discount": "20",
-      "price": "40"
-    },
-    {
+      "id":"c170eecb-ac63-459d-8d9a-3a110a28bebd",
       "title": "Vienna Tech Career Fair",
       "imageUrl": "vienna-tech-career-fair.jpg",
       "organizer": "Tech Jobs Vienna",
@@ -55,6 +42,7 @@
       "price": "15"
     },
     {
+      "id":"b4f24b1f-5cb5-4d76-806e-8d2d8b33a5df",
       "title": "Vienna Start-Up Summit",
       "imageUrl": "vienna-startup-summit.jpg",
       "organizer": "Vienna Business Association",
@@ -64,15 +52,17 @@
       "price": "35"
     },
     {
-      "title": "International Career Day Vienna",
-      "imageUrl": "international-career-day-vienna.png",
-      "organizer": "Global Careers Vienna",
-      "date": "2024-11-20",
-      "location": "Vienna International Centre",
-      "discount": "",
-      "price": "20"
+      "id":"47cf5eb0-1d99-42aa-b85f-a65ddf7a42fe",
+      "title": "Vienna Film Festival",
+      "imageUrl": "vienna-film-festival.jpeg",
+      "organizer": "Vienna Film Society",
+      "date": "2024-10-15",
+      "location": "Vienna State Opera, Vienna",
+      "discount": "20",
+      "price": "40"
     },
     {
+      "id":"dcefb444-45ec-45e7-ab2d-e49dbc1b73c5",
       "title": "Women in Leadership Conference",
       "imageUrl": "women-in-leadership-vienna.jpg",
       "organizer": "Women in Business Vienna",
@@ -82,11 +72,32 @@
       "price": "40"
     },
     {
+      "id":"de0f512d-f780-4f30-b6b1-e45c484d3f1a",
       "title": "Vienna Sustainability Career Fair",
       "imageUrl": "vienna-sustainability-career-fair.jpg",
       "organizer": "Green Careers Austria",
       "date": "2024-11-15",
       "location": "Universität Wien, Vienna",
+      "discount": "",
+      "price": "0"
+    },
+    {
+      "id":"eb112756-4e87-46c6-a888-e01b4aeae16d",
+      "title": "International Career Day Vienna",
+      "imageUrl": "international-career-day-vienna.png",
+      "organizer": "Global Careers Vienna",
+      "date": "2024-11-20",
+      "location": "Vienna International Centre",
+      "discount": "",
+      "price": "20"
+    },
+    {
+      "id":"b8195b14-c4ad-440e-8601-b66e0338d2c2",
+      "title": "Vienna Christmas Market",
+      "imageUrl": "vienna-christmas-market.jpg",
+      "organizer": "City of Vienna",
+      "date": "2024-12-01",
+      "location": "Rathausplatz, Vienna",
       "discount": "",
       "price": "0"
     }
