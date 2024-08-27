@@ -9,7 +9,7 @@
       "location": "Messe Wien Exhibition & Congress Center, Vienna",
       "discount": "15",
       "price": "30",
-      "quantity": "0"
+      "quantity": 4
     },
     {
       "id": "d37929a4-8c81-4de0-88ad-3ede4155a5d8",
@@ -29,7 +29,8 @@
       "date": "2024-09-12",
       "location": "MuseumsQuartier, Vienna",
       "discount": "5",
-      "price": "100"
+      "price": "100",
+      "quantity": 2
     },
     {
       "id": "c170eecb-ac63-459d-8d9a-3a110a28bebd",
@@ -39,7 +40,8 @@
       "date": "2024-09-18",
       "location": "Messe Wien, Vienna",
       "discount": "10",
-      "price": "15"
+      "price": "15",
+      "quantity": 1
     },
     {
       "id": "b4f24b1f-5cb5-4d76-806e-8d2d8b33a5df",

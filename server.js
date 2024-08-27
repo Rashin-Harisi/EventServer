@@ -3,29 +3,42 @@ const server = jsonServer.create();
 const router = jsonServer.router("db.json");
 const middlewares = jsonServer.defaults();
 
+const waitForDbWrite = (req, res, next) => {
+  next(); // Continue request processing
+  req.on('end', async () => { // After request processing finishes
+      if (req.method === 'PATCH') {
+          const { id } = req.params;
+          await router.db.get('events').find({ id: id }).write(); // Wait for DB write
+      }
+  });
+};
+
 server.use(middlewares);
 server.use(jsonServer.bodyParser);
+server.use(waitForDbWrite);
 
 
 server.patch('/events/:id', (req, res) => {
   const { id } = req.params;
   const updates = req.body;
+  console.log("updates",updates.increase);
 
-  // Get the post to update
+  
   const event = router.db.get('events').find({ id: id }).value();
 
   if (!event) {
     return res.status(404).json({ error: 'Post not found' });
   }
 
-  // Merge the updates into the existing post
-  const updatedEvent = { ...event, ...updates };
-
-  // Write back to the database
-  router.db.get('events').find({ id: id }).assign(updatedEvent).write();
+  if (updates.increase) {
+    event.quantity = event.quantity ? event.quantity + 1 : 1;
+  }
+  
+  router.db.get('events').find({ id: id }).assign(event).write();
+  //const updatedEvent = router.db.get('events').find({ id: id }).value();
   
 
-  res.status(200).json(updatedEvent);
+  res.status(200).json(event);
 });
 
 
