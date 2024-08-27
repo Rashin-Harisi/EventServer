@@ -23,9 +23,9 @@ server.patch('/events/:id', (req, res) => {
 
   // Write back to the database
   router.db.get('events').find({ id: id }).assign(updatedEvent).write();
-  const newEvent = router.db.get('events').find({ id: id }).value()
+  
 
-  res.status(200).json(newEvent);
+  res.status(200).json(updatedEvent);
 });
 
 
