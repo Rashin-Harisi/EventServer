@@ -8,7 +8,8 @@
       "date": "2024-09-02",
       "location": "Messe Wien Exhibition & Congress Center, Vienna",
       "discount": "15",
-      "price": "30"
+      "price": "30",
+      "quantity": "0"
     },
     {
       "id": "d37929a4-8c81-4de0-88ad-3ede4155a5d8",

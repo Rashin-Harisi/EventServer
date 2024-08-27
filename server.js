@@ -22,10 +22,26 @@ server.patch('/events/:id', (req, res) => {
   const updatedEvent = { ...event, ...updates };
 
   // Write back to the database
-  router.db.get('events').find({ id: Number(id) }).assign(updatedEvent).write();
+  router.db.get('events').find({ id: id }).assign(updatedEvent).write();
+  const newEvent = router.db.get('events').find({ id: id }).value()
 
-  res.status(200).json(updatedEvent);
+  res.status(200).json(newEvent);
 });
+
+
+server.get('/events', (req, res) => {
+  
+
+  // Get the post to update
+  const events = router.db.get('events').value();
+
+  if (!events) {
+    return res.status(404).json({ error: 'Events not found' });
+  }
+
+  res.status(200).json(events);
+});
+
 
 
 server.use(router);
