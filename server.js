@@ -12,7 +12,7 @@ server.patch('/events/:id', (req, res) => {
   const updates = req.body;
 
   // Get the post to update
-  const event = router.db.get('events').find({ id: Number(id) }).value();
+  const event = router.db.get('events').find({ id: id }).value();
 
   if (!event) {
     return res.status(404).json({ error: 'Post not found' });
