@@ -7,24 +7,24 @@ server.use(middlewares);
 server.use(jsonServer.bodyParser);
 
 
-server.patch('/posts/:id', (req, res) => {
+server.patch('/events/:id', (req, res) => {
   const { id } = req.params;
   const updates = req.body;
 
   // Get the post to update
-  const post = router.db.get('posts').find({ id: Number(id) }).value();
+  const event = router.db.get('events').find({ id: Number(id) }).value();
 
-  if (!post) {
+  if (!event) {
     return res.status(404).json({ error: 'Post not found' });
   }
 
   // Merge the updates into the existing post
-  const updatedPost = { ...post, ...updates };
+  const updatedEvent = { ...event, ...updates };
 
   // Write back to the database
-  router.db.get('posts').find({ id: Number(id) }).assign(updatedPost).write();
+  router.db.get('events').find({ id: Number(id) }).assign(updatedEvent).write();
 
-  res.status(200).json(updatedPost);
+  res.status(200).json(updatedEvent);
 });
 
 
